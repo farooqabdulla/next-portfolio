@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react'
+import { Marquee3D } from './Marquee3D'
+
 
 const socialLinks = [
   { name: 'Github', icon: Github, href: 'https://github.com/farooqabdulla' },
@@ -28,12 +30,6 @@ export default function HeroSection() {
   return (
     <div 
       className="relative min-h-screen flex flex-col justify-center items-center bg-black text-white overflow-hidden"
-    //   style={{
-    //     backgroundImage: `url(https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D), radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%)`,
-    //     backgroundSize: 'cover',
-    //     backgroundPosition: 'center',
-    //     backgroundBlendMode: 'overlay',
-    //   }}
     style={{
         backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, #3c3b3b2e 0%, #000000d6 50%), url(https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
         backgroundSize: 'cover',
@@ -104,7 +100,7 @@ export default function HeroSection() {
           View My Work
         </motion.button>
       </motion.div>
-
+          <Marquee3D/>
       {/* Scroll indicator */}
       <motion.div 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
